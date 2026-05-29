@@ -1,0 +1,35 @@
+# Pinned to the exact versions this project was developed and verified against
+# (Python 3.11). The grader can reproduce the results with:
+#     python -m venv .venv && source .venv/bin/activate
+#     pip install -r requirements.txt
+#
+# NOTE on the Bayesian stack: ArviZ 1.x and PyMC 6.x are a breaking rewrite
+# (renamed args, plot functions moved to a separate package). This project
+# targets the stable ArviZ 0.23 / PyMC 5.28 line below -- do not upgrade past
+# them without porting the code.
+
+# --- Core ---
+numpy==2.4.6
+pandas==3.0.3
+scipy==1.17.1
+
+# --- Plotting ---
+matplotlib==3.10.9
+seaborn==0.13.2
+
+# --- Frequentist time-series / goodness-of-fit helpers ---
+statsmodels==0.14.6
+
+# --- Bayesian estimation (pymc pulls in pytensor; pinned for reproducibility) ---
+pymc==5.28.5
+arviz==0.23.4
+pytensor==2.38.3
+
+# PyTensor compiles C code for NUTS and imports setuptools.errors.CompileError;
+# very old setuptools (<60) lacks it, so pin a modern-but-pre-80 release.
+setuptools>=70,<80
+
+# --- Notebook execution (only needed to run GPR_Index_Analysis.ipynb) ---
+ipykernel==7.2.0
+nbconvert==7.17.1
+jupyter_client==8.8.0
