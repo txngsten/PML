@@ -1,12 +1,10 @@
 # GPR Index — Probabilistic Estimation Engine (COMP3018 Artefact 1)
 
 A comparative **Frequentist (MLE) vs Bayesian (MCMC)** parameter-estimation analysis
-of the Global Political Risk (GPR) Index, focused on quantifying uncertainty. The GPR
-level is modelled as a LogNormal distribution and its parameters are estimated two ways,
-then compared (confidence interval vs credible interval).
+of the Global Political Risk (GPR) Index, focused on quantifying uncertainty.
 
-Two equivalent deliverables: `probabilistic_estimation.py` (CLI script) and
-`GPR_Index_Analysis.ipynb` (narrated notebook).
+Two equivalent deliverables: `probabilistic_estimation.py` (single python file) and
+`GPR_Index_Analysis.ipynb` (more detailed notebook).
 
 ## Setup (Python 3.11)
 
