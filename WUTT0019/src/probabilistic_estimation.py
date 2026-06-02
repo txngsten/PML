@@ -1,10 +1,8 @@
-# Student Name: TODO(student): Your Full Name
+# Student Name: Oliver Wuttke
 # Student FAN: WUTT0019
 # File: probabilistic_estimation.py
-# Date: TODO(student): DD-MM-YYYY
-# Description: Frequentist vs Bayesian parameter estimation on the GPR Index.
-# Usage: python probabilistic_estimation.py
-# Licence: MIT Licence
+# Date: 21-05-2026
+# Description: Frequentist vs Bayesian parameter estimation on the GPR Index and ETL + EDA.
 
 
 import os
