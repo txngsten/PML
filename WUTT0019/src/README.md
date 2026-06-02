@@ -11,17 +11,17 @@ Two equivalent deliverables: `probabilistic_estimation.py` (single python file) 
 ```bash
 python3.11 -m venv .venv
 source .venv/bin/activate        # Windows: .venv\Scripts\activate
-pip install -r requirements.txt
 ```
 
 ## Run
 
 ```bash
 cd src
+pip install -r requirements.txt
 python probabilistic_estimation.py
 ```
 
-This downloads the latest GPR data as a CSV to the current directory.
+This downloads the latest GPR data as a CSV to the current directory and runs the full ETL + EDA + Frequentist vs Bayesian pipeline.
 
 ## Dataset (not submitted — download separately)
 
