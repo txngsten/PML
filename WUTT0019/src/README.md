@@ -23,8 +23,7 @@ cd src
 python probabilistic_estimation.py
 ```
 
-This downloads the latest GPR data, prints the results to the terminal, shows the
-figures in pop-up windows, and writes the processed data to `../data/gpr_processed.csv`.
+This downloads the latest GPR data as a CSV to the current directory.
 
 ## Dataset (not submitted — download separately)
 
