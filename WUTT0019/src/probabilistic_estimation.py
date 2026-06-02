@@ -109,7 +109,6 @@ def run_eda(df):
     ax.set_ylabel("GPR")
     ax.legend()
     plt.tight_layout()
-    plt.show()
 
     # Lognormal vs Normal Distributions
     fig, axes = plt.subplots(1, 2, figsize=(14, 5))
@@ -123,7 +122,6 @@ def run_eda(df):
     axes[1].set_title("Log-Transformed GPR Distribution")
     axes[1].set_xlabel("log(1 + GPR)")
     plt.tight_layout()
-    plt.show()
 
     # ACF and PACF
     fig, axes = plt.subplots(1, 2, figsize=(14, 4))
@@ -132,7 +130,6 @@ def run_eda(df):
     sm.graphics.tsa.plot_pacf(gpr.dropna(), lags=24, ax=axes[1], color=PALETTE["secondary"])
     axes[1].set_title("Partial Autocorrelation (PACF)")
     plt.tight_layout()
-    plt.show()
 
     #Q-Q Plot
     fig, ax = plt.subplots(figsize=(6, 6))
@@ -141,7 +138,6 @@ def run_eda(df):
     ax.get_lines()[0].set_color(PALETTE["primary"])
     ax.get_lines()[1].set_color(PALETTE["alert"])
     plt.tight_layout()
-    plt.show()
 
 
 def fit_model(data):
@@ -253,7 +249,6 @@ def fit_frequentist(data, params, seed=RANDOM_SEED, n_boot=2000):
     ax.set_ylabel("Density")
     ax.legend()
     plt.tight_layout()
-    plt.show()
     return out
 
 
@@ -304,7 +299,6 @@ def fit_bayesian(data, draws=2000, tune=1000, chains=4, seed=RANDOM_SEED):
     fig = plt.gcf()
     fig.suptitle("Posterior Predictive Check -- LogNormal")
     fig.tight_layout()
-    plt.show()
     return out
 
 
@@ -341,7 +335,6 @@ def compare_estimates(mle_out, bayes_out):
         ax.legend(loc="best")
     fig.suptitle("Frequentist vs Bayesian Estimates -- LogNormal")
     fig.tight_layout()
-    plt.show()
 
 
 def main():
@@ -368,6 +361,8 @@ def main():
     df.to_csv(DEFAULT_OUTPUT, index=False)
     print(f"Processed dataframe written to {os.path.abspath(DEFAULT_OUTPUT)} "
           f"({len(df)} rows).")
+
+    plt.show()
 
 
 if __name__ == "__main__":
