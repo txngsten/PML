@@ -1,5 +1,5 @@
 # Student Name: Oliver Wuttke
-# Student FAN: WUTT0019
+# Student FAN: A1_wutt0019
 # File: probabilistic_estimation.py
 # Date: 21-05-2026
 # Description: Frequentist vs Bayesian parameter estimation on the GPR Index and ETL + EDA.
